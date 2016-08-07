@@ -23,7 +23,7 @@
         <scene>
 <Viewpoint position="-0.40644 0.60483 0.00307" orientation="-0.95954 -0.26158 0.10418 1.55009" 
 	zNear="0.22250" zFar="1.23358" description="defaultX3DViewpointNode"></Viewpoint>                
-                
+            <Transform DEF="wall_piece">    
                 <Inline url="obj/wall_piece.x3d"></Inline>
             </Transform>
 
@@ -33,7 +33,7 @@
     <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
  
     <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
-    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='cube' toField='set_rotation'></ROUTE>
+    <ROUTE fromNode='spinThings' fromField='value_changed' toNode='wall_piece' toField='set_rotation'></ROUTE>
   </scene>
 <!--  
             <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
